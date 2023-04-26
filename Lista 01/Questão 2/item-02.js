@@ -21,7 +21,7 @@ estimateQuinaProbability(1000000);
 
 /**
  *
- * Este programa rodou a simuluçaõ da lotérica 1.000.000 vezes e respondeu:
+ * Este programa rodou a simulação da lotérica 1.000.000 vezes e respondeu:
  * "Estimativa da probabilidade de acertar na quina: 0.000012"
  *
  * Que é significa que a chance de acertar na quina é de 0.0012%
