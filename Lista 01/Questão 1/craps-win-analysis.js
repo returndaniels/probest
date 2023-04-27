@@ -1,4 +1,4 @@
-const { playCraps } = require("./item-01");
+const { playCraps } = require("./craps");
 
 let winCounter = 0;
 for (let i = 0; i < 10000; i++) {

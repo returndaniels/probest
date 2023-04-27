@@ -1,4 +1,4 @@
-const { playCraps } = require("./item-01");
+const { playCraps } = require("./craps");
 
 console.log(playCraps());
 console.log(playCraps());
