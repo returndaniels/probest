@@ -11,8 +11,8 @@ O programa pode ser executado de duas maneiras:
 O programa pode ser utilizado como um módulo em outro código JavaScript. Para isso, basta importar a função lotterySimulation de lottery-simulation.js e chamá-la com os parâmetros desejados:
 
 ```javascript
-const lotterySimulation = require("./item-01.js"); // Testa quina
-// const lotterySimulation = require("./item-03.js"); // Testa quadra
+const lotterySimulation = require("./lottery-simulation-quina.js"); // Testa quina
+// const lotterySimulation = require("./lottery-simulation-quadra.js"); // Testa quadra
 
 const result = lotterySimulation({ chosenNumbers: [1, 2, 3, 4, 5, 6], verboseMode: true });
 console.log(result);
@@ -28,11 +28,11 @@ O objeto de opções passado como parâmetro para a função ```lotterySimulatio
 
  ### 2. Como um script na linha de comando
 
- O programa também pode ser executado diretamente na linha de comando. Para isso, basta chamar o arquivo ```item-01.js``` (ou ```item-03.js``` para exemplo com quadra) passando a opção --run e os números escolhidos como argumentos:
+ O programa também pode ser executado diretamente na linha de comando. Para isso, basta chamar o arquivo ```lottery-simulation-quina.js``` (ou ```lottery-simulation-quadra.js``` para exemplo com quadra) passando a opção --run e os números escolhidos como argumentos:
 
  ```bash
- node item-01.js --run 1 2 3 4 5 6
- node item-03.js --run 1 2 3 4 5 6
+ node lottery-simulation-quina.js --run 1 2 3 4 5 6
+ node lottery-simulation-quadra.js --run 1 2 3 4 5 6
  ```
 
  O programa irá filtrar os argumentos numéricos válidos e executar a simulação da loteria, imprimindo o resultado na tela.

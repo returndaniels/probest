@@ -1,18 +1,18 @@
-const lotterySimulation = require("./item-01");
+const lotterySimulation = require("./lottery-simulation-quadra");
 
 function estimateQuinaProbability(numSimulations) {
-  let numQuinas = 0;
+  let numQuadras = 0;
 
   for (let i = 0; i < numSimulations; i++) {
     let result = lotterySimulation({ verboseMode: false });
     if (result === 1) {
-      numQuinas++;
+      numQuadras++;
     }
   }
 
-  let probability = numQuinas / numSimulations;
+  let probability = numQuadras / numSimulations;
   console.log(
-    `Estimativa da probabilidade de acertar na quina: ${probability}`
+    `Estimativa da probabilidade de acertar na quadra: ${probability}`
   );
   return probability;
 }
@@ -22,8 +22,8 @@ estimateQuinaProbability(1000000);
 /**
  *
  * Este programa rodou a simulação da lotérica 1.000.000 vezes e respondeu:
- * "Estimativa da probabilidade de acertar na quina: 0.000012"
+ * "Estimativa da probabilidade de acertar na quina: 0.000425"
  *
- * Que é significa que a chance de acertar na quina é de 0.0012%
+ * Que é significa que a chance de acertar na quina é de 0.0425%
  *
  */
