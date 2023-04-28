@@ -5,7 +5,7 @@ Este repositório é dedicado aos trabalhos da disciplina Estatística e Probabi
 ## Participantes do grupo
 
 - Ademario Santana (adeluigi@dcc.ufrj.br), DRE: 118143148 
-- Daniel de Sousa da da Silva (danielss@dcc.ufrj.br), DRE: 118064962
+- Daniel de Sousa da Silva (danielss@dcc.ufrj.br), DRE: 118064962
 
 ## Sobre o Desenvolvimento 
 
