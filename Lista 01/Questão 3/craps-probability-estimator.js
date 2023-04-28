@@ -1,42 +1,49 @@
-function simulateGame(a, b) {
+function playRound(a, b) {
+  const resultA = rollDice() + rollDice() + a;
+  const resultB = rollDice() + rollDice() + b;
+  return resultA > resultB;
+}
+
+function playGame(a, b) {
   let pointsA = 0;
   let pointsB = 0;
-  for (let i = 0; i < 10; i++) {
-    const resultA = rollDice() + rollDice() + a;
-    const resultB = rollDice() + rollDice() + b;
-    if (resultA > resultB) {
+  while (pointsA < 10 && pointsB < 10) {
+    if (playRound(a, b)) {
       pointsA++;
-    } else if (resultB > resultA) {
+    } else {
       pointsB++;
     }
-    if (pointsA >= 10) {
-      return "A";
-    } else if (pointsB >= 10) {
-      return "B";
-    }
   }
-  return null;
+  return pointsA === 10;
 }
 
 function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
 
-function estimateProbabilityOfAVictory(a, b, n) {
-  let victoriesA = 0;
+function estimateProbability(a, b, n) {
+  let winsA = 0;
   for (let i = 0; i < n; i++) {
-    const winner = simulateGame(a, b);
-    if (winner === "A") {
-      victoriesA++;
+    if (playGame(a, b)) {
+      winsA++;
     }
   }
-  const probability = victoriesA / n;
-  console.log(
-    `Probabilidade de A vencer com valores a=${a}, b=${b}: ${probability}`
-  );
+  return winsA / n;
 }
 
-estimateProbabilityOfAVictory(7, 8, 100000);
-estimateProbabilityOfAVictory(8, 10, 100000);
-estimateProbabilityOfAVictory(6, 10, 100000);
-estimateProbabilityOfAVictory(8, 11, 100000);
+console.log(
+  "Probabilidade de A vencer com valores a=7, b=8:",
+  estimateProbability(7, 8, 100000)
+);
+console.log(
+  "Probabilidade de A vencer com valores a=8, b=10:",
+  estimateProbability(8, 10, 100000)
+);
+console.log(
+  "Probabilidade de A vencer com valores a=6, b=10:",
+  estimateProbability(6, 10, 100000)
+);
+console.log(
+  "Probabilidade de A vencer com valores a=8, b=11:",
+  estimateProbability(8, 11, 100000)
+);
