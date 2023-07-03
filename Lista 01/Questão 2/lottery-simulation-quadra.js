@@ -2,7 +2,7 @@ function print(enabled, ...args) {
   if (enabled) console.log(...args);
 }
 
-function lotterySimulation({ chosenNumbers, verboseMode = true }) {
+function lotterySimulation({ chosenNumbers = [], verboseMode = true }) {
   // Gerando os números aleatórios
   let drawnNumbers = [];
   while (drawnNumbers.length < 6) {
