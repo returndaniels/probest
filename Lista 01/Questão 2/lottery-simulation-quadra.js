@@ -13,7 +13,7 @@ function lotterySimulation({ chosenNumbers = [], verboseMode = true }) {
   }
 
   // Verificando se há números escolhidos
-  if (chosenNumbers?.length !== 6) {
+  if (chosenNumbers.length !== 6) {
     chosenNumbers = [1, 5, 10, 20, 30, 40]; // Exemplo de números escolhidos
   }
 
