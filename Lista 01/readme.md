@@ -13,29 +13,70 @@ Este repositório contém aplicações escritas em Javascript que são executada
 
 ## Instalando o Node.js
 
-### Linux e Mac
+É recomendada a instalação da versão mais recente do NodeJs para que não ocorram problemas ao exectar os programs.
 
-#### Usando um gerenciador de pacotes
+### Usando um gerenciador de pacotes (Linux e Mac)
 
-Se você estiver usando uma distribuição Linux que possua um gerenciador de pacotes, como o apt-get, você pode instalar o Node.js com o seguinte comando:
+#### Linux (Distribuições baseadas em Debian)
+
+
+Se você estiver usando uma distribuição Linux que possua um gerenciador de pacotes, como o apt, você pode instalar o Node.js com os seguintes comando:
+
+1. Certifique-se de que seu sistema esteja atualizado executando os seguintes comandos:
 
 ```bash
-sudo apt-get install nodejs
+sudo apt update
+sudo apt upgrade
 ```
 
+2. (Não recomendado) Caso queira instalar a versão a versão dispoível no "Main Ubuntu Repository" mas executar:
+
+```bash
+sudo apt install nodejs
+```
+
+2. (Recomendado) Para facilitar a instalação da versão do Node.js mais recente, é recomendado utilizar o Node Version Manager (NVM). Para instalar o NVM, execute o seguinte comando:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
+
+
+3. Feche e abra o terminal novamente ou execute o seguinte comando para carregar o NVM:
+
+```bash
+source ~/.bashrc
+```
+
+4. Agora, você pode instalar a versão mais recente do Node.js usando o NVM. Para verificar as versões disponíveis, execute o seguinte comando:
+
+```
+nvm ls-remote
+```
+
+5. Escolha a versão mais recente (ou a versão desejada) e instale-a. Por exemplo, para instalar a versão mais recente, execute:
+
+```bash
+nvm install node
+```
+
+6. Após a instalação, verifique se o Node.js foi instalado corretamente executando os seguintes comandos:
+
+```bash
+node --version
+npm --version
+```
+
+#### Mac
 No Mac, você pode usar o gerenciador de pacotes Homebrew para instalar o Node.js com o seguinte comando:
 
 ```bash
 brew install node
 ```
 
-#### Baixando o pacote de instalação
+### Baixando o pacote de instalação
 
-Se você preferir, também pode baixar o pacote de instalação do Node.js diretamente do site oficial (https://nodejs.org). Faça o download da versão adequada para o seu sistema operacional e execute o instalador.
-
-### Windows
-
-Para instalar o Node.js no Windows, basta fazer o download do pacote de instalação no site oficial (https://nodejs.org) e executar o instalador.
+Se você preferir, também pode baixar o pacote de instalação do Node.js diretamente do site oficial (https://nodejs.org). Faça o download da versão adequada para o seu sistema operacional e execute o instalador. Esse método pode ser utilizado por usuários de Windows, Linux e Mac.
 
 ## Executando um programa Javascript com o Node.js
 
